@@ -1,5 +1,8 @@
 package com.lzh.springbootlogin.domain;
 
+import org.springframework.web.bind.annotation.RequestBody;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,7 +13,11 @@ public class User {
     @Id
     @GeneratedValue
     private Long id;
+
+    @Column(nullable = false)
     private String username;
+
+    @Column(nullable = false)
     private String password;
 
 
